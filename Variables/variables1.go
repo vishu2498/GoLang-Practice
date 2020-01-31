@@ -40,6 +40,21 @@ func main() {
 	//If a value is defined in global scope then it can be redefined in local scope
 	var var11 string = "there"
 	fmt.Println(var11)
+
+	//It is also possible to declare and define multiple variables with their own data types. Golang is strong enough to understand them.
+	iron,copper,steel,bronze:=56,21.44,"example",false
+	fmt.Printf("%v, %T",iron,iron)
+	fmt.Println()
+	fmt.Printf("%v, %T",copper,copper)
+	fmt.Println()
+	fmt.Printf("%v, %T",steel,steel)
+	fmt.Println()
+	fmt.Printf("%v, %T",bronze,bronze)
+	fmt.Println()
+
+	//len() function is used to determine that length of the value of the variable
+	var var17 string="associate"
+	fmt.Println(len(var17))
 }
 
 var var7 int //this is package-level or global-level variable
