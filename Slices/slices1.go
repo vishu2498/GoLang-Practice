@@ -27,10 +27,12 @@ func main() {
 
 	//Performing Slice Operations
 	slice5:=[]int{1,2,3,4,5,6}
+	//Elements will be ignored from the left-side of slice if number is written on the left-side of ':'
+	//Elements will be ignored from the right-side of slice if number is written on the right-side of ':'
 	var1:=slice5[:] //This will slice the all the elements of slice5
 	var2:=slice5[3:] //First number is exclusive. It will ignore the first 3 elements of slice and store everything else
 	var3:=slice5[:4] //Second number is inclusive. It will print the first 4 elements of slice5
-	var4:=slice5[3:6] //Using inclusive & exclusive numbers. It will slice (print) the 4th, 5th and 6th elements.
+	var4:=slice5[3:5] //Using inclusive & exclusive numbers. It will slice (print) the 4th and 5th elements.
 	fmt.Println(var1)
 	fmt.Println(var2)
 	fmt.Println(var3)
