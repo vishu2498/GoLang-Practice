@@ -35,6 +35,7 @@ func main() {
 	fmt.Println("Length of array: ",len(arr4))
 
 	//Getting the capacity of array
-	var arr5 [6]string
+	//Getting capacity of array is actually useless since the length and capacity will always be equal
+ 	var arr5 [6]string
 	fmt.Println("Capacity of array: ",cap(arr5))
 }
