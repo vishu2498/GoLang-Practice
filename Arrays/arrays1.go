@@ -38,4 +38,9 @@ func main() {
 	//Getting capacity of array is actually useless since the length and capacity will always be equal
  	var arr5 [6]string
 	fmt.Println("Capacity of array: ",cap(arr5))
+	
+	//Copying a single value from one array to another array
+	arr7:=[3]int{5,3,2}
+	var arr8 [3]int
+	arr8[2]=arr7[1] //Copying the 2nd value of arr7 to 3rd value of arr8
 }
