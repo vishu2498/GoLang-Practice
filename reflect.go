@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"reflect"
 )
+
 type order struct {
 	ordId      int
 	customerId int
 }
+
 func createQuery(q interface{}) {
 	t := reflect.TypeOf(q)
 	v := reflect.ValueOf(q)
@@ -60,7 +62,7 @@ func main() {
 	fmt.Println(cnt)
 	fmt.Println(src)
 	fmt.Println("Using different data types from reflect: ")
-	for _, v := range []interface{}{"vishu", 98,} {
+	for _, v := range []interface{}{"vishu", 98} {
 		switch v := reflect.ValueOf(v); v.Kind() {
 		case reflect.String:
 			fmt.Println("String is: ", v.String())
