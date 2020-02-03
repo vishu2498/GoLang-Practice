@@ -20,6 +20,7 @@ func main() {
 	fmt.Println(var3)
 
 	//Short-declaration operator (:=) is used when we want to declare and define the variable without providing its data type
+	//This operator can't be used while defining a global level operator
 	//Using short-declaration operator
 	var4:=23
 	var5:="vishu"
