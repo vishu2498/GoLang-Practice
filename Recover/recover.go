@@ -40,7 +40,7 @@ func recoverName() {
 	}
 }
 func fullName(firstName *string, lastName *string) {
-	//when the panic from the if conditions arrives, it moves recoverName function
+	//when the panic from the if conditions arrives, it moves to recoverName function
 	//the recoverName function helps in recovery from panic
 	//so the program execution continues
 	defer recoverName()
