@@ -6,6 +6,7 @@ import "fmt"
 //A known context can be of any data-type like struct, int, map etc.
 //A method is a function that contains a receiver argument. This receiver argument can be of any data-type.
 //When the method get called, it receives a copy of the receiver argument and uses it via the variable defined with it.
+//The concept of receiver argument is that it tells the method that the method must deal with the data-type that's described by the receiver argument.
 func main() {
 	g:=greeter{
 		greeting: "hello",
@@ -21,12 +22,12 @@ func main() {
 	g1.greet1()
 	fmt.Println("New name:",g1.name) //output shows that method implemented the new hard-coded name
 }
+
 type greeter struct {
 	greeting string
 	name string
 }
 
-//
 func (g greeter) greet() { //when the receiver argument isn't a pointer, its called a value receiver.
 	//So, we are getting a copy of 'greeter' struct and not the actual struct itself.
 	fmt.Println(g.greeting,g.name)
