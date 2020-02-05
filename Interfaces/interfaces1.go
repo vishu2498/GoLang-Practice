@@ -7,6 +7,7 @@ But we are allowed to create a variable of an interface type and this variable c
 the methods the interface requires. Or in other words, the interface is a collection of methods as well as it is a custom type.
  */
 //InGolang, interfaces are implemented implicitly.
+//All the methods defined inside an interface need to be implemented.
 func main() {
 	//Default value of interface is '<nil>'
 	type Counter interface{} //If there are no methods inside interface, it is called empty interface. So, all types implement the empty interface.
