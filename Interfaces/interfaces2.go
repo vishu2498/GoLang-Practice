@@ -22,3 +22,6 @@ func (ic *IntCounter) Increment() int {
 	*ic++
 	return int(*ic) //type-casted since even if IntCounter is used as 'pointer int' in the method, it is actually 'int'
 }
+
+//When implementing an interface, if value-type is used then the methods implementing the interface have to have a value receiver.
+//When implementing an interface, if pointer-type is used then the methods implementing the interface have to have a pointer receiver. (using referencing and de-referencing operators)
