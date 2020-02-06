@@ -28,8 +28,8 @@ func main() {
 		close(ch)
 		/*If we don't mention this function here, the 'for' loop will continue to execute and will not know when to stop receiving values.
 		So it will cause a deadlock.
-		close() is used to close the channel at the point of time where it mentioned in the goroutine.
-		Also, if mention close() before or in between sending values to the channel, it will cause a 'panic' saying that
+		close() is used to close the channel at the point of time where it is mentioned in the goroutine.
+		Also, if we mention close() before or in between sending values to the channel, it will cause a 'panic' saying that
 		we passed value to a closed channel. And this 'panic' is not recoverable.
 		 */
 		wg.Done()

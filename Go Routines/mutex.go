@@ -61,3 +61,8 @@ func increment1() {
 	m.Unlock()
 	wg1.Done()
 }
+
+/*If the Read & Write Locks were present in both the GoRoutines, then even if the counter will be fixed
+but the result will still be not appropriate because we don't have chance to lock the mutex before we are trying to read it second time.
+Hence, the Read & Write Locks were placed in the main() function. So, the Locking is done in the main() function and
+the Locks are individually unlocked at the individual function level.*/
