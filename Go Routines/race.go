@@ -39,3 +39,5 @@ func main() {
 	msg1 = "bye"
 	time.Sleep(100 * time.Millisecond)
 }
+
+//For checking if a GoLang program has any race condition, we can run this command: "go run -race filename.go"
