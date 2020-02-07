@@ -8,6 +8,18 @@ func main() {
 	//Two-Dimensional Array
 	arr1:=[3][3]int{[3]int{1,2,5}, [3]int{5,6,1}, [3]int{4,9,7}}
 	fmt.Println(arr1)
+	fmt.Println()
+
+	//Copying two-dimensional arrays
+	arr7:=[3][3]int{
+		0:{0,1,5},
+		1:{2,3,4},
+		2:{5,7,8},
+	}
+	fmt.Println(arr7)
+	arr8:=arr7
+	fmt.Println(arr8)
+	fmt.Println()
 
 	//Refined way of declaring and defining two-dimenstional array
 	var arr2 [3][3]int
