@@ -4,6 +4,7 @@ import "fmt"
 
 func main() {
 	//Maps are basically key-value stores
+	//A 'nil' or a map with no key-value can be created but it can’t be used to store key/value pairs.
 	//1st data-type of map is the data-type for key
 	//2nd data-type of map is the data-type for value
 	//Putting ',' after every map value is compulsory
@@ -50,6 +51,7 @@ func main() {
 	fmt.Println(map5)
 
 	//The return order of map is not guaranteed. It means that maps will be unsorted (even when they are printed).
+	//The reason for this is that maps are implemented using hash table.
 	//But they will be only sorted on the basis of the keys. Maps will always be sorted on the alphabetical and numerical order or keys.
 	//Unlike maps, arrays and slices will always return in the order they are stored.
 	map6:=make(map[string]int)
@@ -60,6 +62,12 @@ func main() {
 		"beach": 27,
 	}
 	fmt.Println(map6)
+
+	/*The map’s hash table contains a collection of buckets. When we’re storing, removing,
+	or looking up a key/value pair, everything starts with selecting a bucket. This is
+	performed by passing the key—specified in our map operation—to the map’s hash
+	function. The purpose of the hash function is to generate an index that evenly distributes
+	key/value pairs across all available buckets. */
 
 	//Deleting key-value from map. delete() function will be used.
 	map7:=make(map[string]int)
