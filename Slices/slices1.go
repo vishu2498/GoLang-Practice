@@ -15,6 +15,14 @@ func main() {
 	slice2:=[]int{5,2,3,8,9}
 	fmt.Println(len(slice2))
 	fmt.Println(cap(slice2))
+	fmt.Println()
+
+	//Printing the slice using for-loop for every element
+	slice6:=[]int{1,2,3,4,5}
+	for i:=0; i<len(slice6);i++ {
+		fmt.Println(slice6[i])
+	}
+	fmt.Println()
 
 	//Unlike arrays, if a slice is declared equal to another slice, then the pointer to the array is copied and now both slices point to the same array
 	//So, changing values by any of the slice will change the values of the array
@@ -37,5 +45,9 @@ func main() {
 	fmt.Println(var2)
 	fmt.Println(var3)
 	fmt.Println(var4)
+	//If we change an element from slice of a slice by its index, the change will reflect in the original slice too.
+	var4[1]=56
+	fmt.Println(var4)
+	fmt.Println(slice5) //change appeared in the exact index in the original slice too
 	fmt.Println()
 }

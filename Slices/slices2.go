@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	//Slices can also be made by make() function
 	//1st argument will be the data-type of slice, 2nd will be length of slice and 3rd will be capacity of slice
+	//Length of the slice can't be larger than capacity of slice. If we do so, compiler will give an error: "len larger than cap in make([]int)".
 	slice1:=make([]int,3,5) //It is possible to have different length and capacity of a slice (unlike arrays)
 	fmt.Println("Length:",len(slice1))
 	fmt.Println("Capacity:",cap(slice1))
@@ -45,4 +46,10 @@ func main() {
 	slice7:=append(slice4[:2],slice4[3:]...) //this is keeping the first 2 elements and last 2 elements of slice4
 	fmt.Println(slice7)
 	fmt.Println(slice4) //Notice that the values of slice4 are changed due to the operation performed by slice7
+
+	//When we build a slice with make() function by giving its length and capacity and slice that slice with three index slice, the new slice has again reduced length and capacity.
+	slice8:=[]string{"1st","2nd","3rd","4th","5th"}
+	slice9:=slice8[2:4:5]
+	//1st number represents to refer to 3rd element of slice8, 2nd number represents till where to slice from the 1st number position, 3rd number defines the capacity of slice but should not be lower than 2nd number and should not be more than the range of original slice.
+	fmt.Println(slice9)
 }
