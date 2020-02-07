@@ -7,6 +7,7 @@ func main() {
 	//Slice is actually a projection of the underlying array (refer to)
 	//Slices can also be referred to pointer for an array
 	//They are similarly declared and defined like arrays but no size is defined
+	//On a 64-bit architecture, a slice requires 24 bytes of memory.
 	slice1:=[]int{4,6,2,1}
 	fmt.Println(slice1)
 	fmt.Println()
