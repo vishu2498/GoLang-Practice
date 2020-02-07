@@ -51,5 +51,5 @@ func main() {
 	slice8:=[]string{"1st","2nd","3rd","4th","5th"}
 	slice9:=slice8[2:4:5]
 	//1st number represents to refer to 3rd element of slice8, 2nd number represents till where to slice from the 1st number position, 3rd number defines the capacity of slice but should not be lower than 2nd number and should not be more than the range of original slice.
-	fmt.Println(slice9)
+	fmt.Println(slice9,len(slice9),cap(slice9))
 }
