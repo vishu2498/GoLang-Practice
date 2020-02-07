@@ -24,6 +24,14 @@ func main() {
 	}
 	fmt.Println()
 
+	//Iterating the slice via for-range-loop
+	slice7:=[]int{2,4,8}
+	for key,value:=range slice7{ //the 'key' and 'value' variables store the index and data of slice.
+		//It is compulsory to write slice name after 'range' keyword.
+		fmt.Println(key,value)
+	}
+	fmt.Println()
+
 	//Unlike arrays, if a slice is declared equal to another slice, then the pointer to the array is copied and now both slices point to the same array
 	//So, changing values by any of the slice will change the values of the array
 	slice3:=[]string{"hello","there","bye"}
