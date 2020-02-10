@@ -60,3 +60,9 @@ func main() {
 	fmt.Println(slice5) //change appeared in the exact index in the original slice too
 	fmt.Println()
 }
+
+/*If we try to print an element of slice which is not present actually and out of the scope of slice,
+this error will be received: "panic: runtime error: index out of range [5] with length 3"
+eg. slice1:=make([]int,3,5)
+	fmt.Println(slice1[5])
+*/

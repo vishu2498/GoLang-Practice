@@ -11,7 +11,7 @@ func main() {
 	fmt.Println()
 
 	//Appending to multi-dimensional slice
-	//When appending is complete an entire new slice of integers and a new underlying array is allocated and then copied back into index 0 of the outer slice.
+	//When appending is complete an entire new slice of integers, a new underlying array is allocated and then copied back into index 0 of the outer slice.
 	slice1[0]=append(slice1[0],20)
 	for key,value:=range slice1 {
 		fmt.Println(key,value)
