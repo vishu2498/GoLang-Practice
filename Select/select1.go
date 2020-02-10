@@ -27,6 +27,7 @@ func main() {
 	case v2:=<-result2:
 		fmt.Println(v2)
 	}
+	//In the case where the channel is closed manually, 'select' will always choose that case despite other sources still providing data to channel.
 }
 
 func printmsg1(ch chan string) {
