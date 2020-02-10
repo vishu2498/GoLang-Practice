@@ -35,3 +35,5 @@ func main() {
 	}()
 	wg.Wait()
 }
+
+//Passing pointers to a channel can create race conditions.
