@@ -23,6 +23,7 @@ func main() {
 	default:
 		fmt.Println("took too long to respond")
 	//'default' also the prevents the program moving to deadlock state. So, if the select cases are blocking the code and the program is entering deadlock state, 'default' will prevent that.
+	//It will also execute when even if the data received from channel is 'nil'
 	}
 }
 
