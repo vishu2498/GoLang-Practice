@@ -30,7 +30,7 @@ func main() {
 		So it will cause a deadlock.
 		close() is used to close the channel at the point of time where it is mentioned in the goroutine.
 		Also, if we mention close() before or in between sending values to the channel, it will cause a 'panic' saying that
-		we passed value to a closed channel. And this 'panic' is not recoverable.
+		we passed value to a closed channel. The panic will be: "panic: send on closed channel". And this 'panic' is not recoverable.
 		 */
 		wg.Done()
 	}(ch)
