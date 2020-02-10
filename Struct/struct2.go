@@ -13,7 +13,7 @@ func main() {
 		name: "vishu",
 		number: 45,
 	}
-	fmt.Printf("%v, %T",struct1,struct1) //Getting the data-type of variable defined as struct wil return the struct's fields and their data-types.
+	fmt.Printf("%v, %T",struct1,struct1) //Getting the data-type of variable defined as struct will return the struct's fields and their data-types.
 	fmt.Println()
 
 	//Unlike maps and slices, struct refers to independent data-sets.
