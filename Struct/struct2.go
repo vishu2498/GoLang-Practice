@@ -13,7 +13,8 @@ func main() {
 		name: "vishu",
 		number: 45,
 	}
-	fmt.Println(struct1)
+	fmt.Printf("%v, %T",struct1,struct1) //Getting the data-type of variable defined as struct wil return the struct's fields and their data-types.
+	fmt.Println()
 
 	//Unlike maps and slices, struct refers to independent data-sets.
 	//So, if any struct variable is declared equal to another struct variable, then changing field values from one struct will not change the field values on another struct.
