@@ -1,3 +1,4 @@
+//Wait for the program to execute completely
 package main
 
 import (
