@@ -34,6 +34,8 @@ func (cw ConsoleWriter) Write(data []byte) (int,error) {
 	return n,err
 }
 
+//It is also not important to describe the argument with the method exactly like that's defined previously. Instead, the fields of struct can directly be written as arguments of the method.
+//This allows the method to work directly with the struct fields as only and later these arguments work as the input for the fields of the struct.
 /*Workflow of the program:
 1. We define an interface that contains a method. This method takes slice of bytes as argument and returns int and error.
 2. We define a struct that does not hold any fields.
