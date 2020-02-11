@@ -35,3 +35,14 @@ func main() {
 
 //It is important to note that if we provide value to an unbuffered channel, then it is compulsory to receive it otherwise program will enter deadlock state.
 //And if we provide value to a buffered channel, then it is not compulsory to receive it. Program will not enter deadlock state.
+
+/*The three channel options are Unbuffered, Buffered >1 or Buffered =1.
+
+Guarantee: An Unbuffered channel gives you a Guarantee that a signal being sent has been received.
+Because the Receive of the signal Happens Before the Send of the signal completes.
+
+No Guarantee: A Buffered channel of size >1 gives you No Guarantee that a signal being sent has been received.
+Because the Send of the signal Happens Before the Receive of the signal completes.
+
+Delayed Guarantee: A Buffered channel of size =1 gives you a Delayed Guarantee. It can guarantee that the previous signal that was sent has been received.
+Because the Receive of the First Signal, Happens Before the Send of the Second Signal completes.*/
