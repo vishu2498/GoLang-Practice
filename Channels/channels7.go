@@ -32,3 +32,6 @@ func main() {
 	}()
 	wg.Wait()
 }
+
+//It is important to note that if we provide value to an unbuffered channel, then it is compulsory to receive it otherwise program will enter deadlock state.
+//And if we provide value to a buffered channel, then it is not compulsory to receive it. Program will not enter deadlock state.
