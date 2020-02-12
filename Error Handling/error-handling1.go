@@ -8,7 +8,7 @@ func Divide(a int, b int) (int, error) {
 
 	// can not divide by `0`
 	if b == 0 {
-		return 0, errors.New("Can not devide by Zero!")
+		return 0, errors.New("Can not divide by Zero!")
 	} else {
 		return (a / b), nil
 	}
