@@ -6,11 +6,9 @@ import (
 	"os"
 )
 
-type eg1 struct {
-	value1 string
-}
 //Using functions of error package
 //In majority of the functions, the 1st argument is that error on which we want operations to occur.
+//All the stack traces are actually the struct containing a message and a stack object pointer in which stack object is actually a slice.
 func main() {
 	//Usually when the errors are checked and returned while using 'if err!=nil', the error is returned but without any context i.e. without any additional information except the error name.
 
@@ -38,6 +36,22 @@ func main() {
 	//Whenever "%+v" is used with 'errors.Wrap()' for output, it displays stack traces of both the 1st error and 2nd added message error (string).
 	fmt.Printf("%+v",err2)
 	fmt.Println()
+
+	//'errors.Wrapf()' performs the same function of 'errors.Wrap()' i.e. adding a custom message with original error.
+	//However, we have to specify that the custom message is of which data-type.
+	//1st argument is the original error dealing with, 2nd is the format in which we will specify the new message, 3rd argument will be the new custom message.
+	//Since this function has 3rd argument of type interface{}, it allows to add message of any data-type unlike only string type with 'errors.Wrap()'.
+	var13:=errors.New("11th")
+	var14:=errors.Wrapf(var13,"%s","12th")
+	fmt.Println(var14)
+	//If we provide the custom message (3rd argument) with different data-type than the data-type of original error, the output will show that the format is representing that data-types are different.
+	var15:=errors.New("13th")
+	var16:=errors.Wrapf(var15,"%s",56)
+	fmt.Println(var16)
+	//3rd argument can also be used to take the data-type of the given original error (1st argument)
+	var17:=errors.New("14th")
+	var18:=errors.Wrapf(var13,"%T",var17)
+	fmt.Println(var18)
 
 	var3 := errors.New("whoops")
 	err3 := errors.Unwrap(var3) //Unwrap returns the next error in err's chain. If there is no next error, Unwrap returns nil.
@@ -69,7 +83,7 @@ func main() {
 	fmt.Println()
 
 	//'errors.WithMessagef()' is an extension over 'errors.WithMessage()' and similarly adds a custom message with the given error.
-	//1st argument is the error dealing with, 2nd is the format in which we will specify the new message, 3rd argument will be the new custom message.
+	//1st argument is the original error dealing with, 2nd is the format in which we will specify the new message, 3rd argument will be the new custom message.
 	//Since this function has 3rd argument of type interface{}, it allows to add message of any data-type unlike only string type with 'errors.WithMessage()'.
 	var8:=errors.New("8th")
 	var9:=errors.WithMessagef(var8,"%s","9th")
@@ -89,8 +103,13 @@ func main() {
 			fmt.Println(err)
 		}
 	}
+	fmt.Println()
 
-
+	//'errors.WithStack()' displays the error with its extended stack trace when displayed with "%+v".
+	var11:=errors.New("10th")
+	var12:=errors.WithStack(var11)
+	fmt.Printf("%+v",var12)
+	//'errors.WithStack()' displays the extended stack trace. Whereas 'errors.Errorf()' and 'fmt.Printf("%+v")' display short stack trace.
 
 	//New, Errorf, Wrap, and Wrapf record a stack trace at the point they are invoked.
 }
