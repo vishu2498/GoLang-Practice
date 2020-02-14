@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	//Strings in GoLang are actually aliases of bytes
@@ -20,4 +23,10 @@ func main() {
 	var4 := "hello"
 	var5 := []byte(var4)
 	fmt.Println(var5) //This will show the ASCII (UTF-8) values of all the characters of the string
+
+	//'string.Trim()' from 'strings' package cuts the string given in the 2nd argument from the 1st argument
+	//And returns the remaining slice of string
+	var6:="egstring"
+	fmt.Println(strings.Trim(var6,"eg"))
+	fmt.Println(var6) //showing that 'strings.Trim()' works on copy of data passed into arguments and not on original data
 }
