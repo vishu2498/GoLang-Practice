@@ -25,6 +25,8 @@ type Writer interface {
 	Write([]byte) (int,error)
 }
 
+/*The user-defined type which the method uses as receiver is also called concrete type since interface values have
+no concrete behavior without the implementation of the stored user-defined value.*/
 type ConsoleWriter struct { //this struct implements Writer interface
 
 }
