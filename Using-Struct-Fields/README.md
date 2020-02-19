@@ -1,0 +1,1 @@
+**Please include GOPATH before implementing this package and running the file.**
