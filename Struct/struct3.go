@@ -4,6 +4,7 @@ import "fmt"
 
 //Embedded structs are the structs in which one struct is utilized in another struct
 //So, we get the option to declare the values of a struct from another struct
+//This is also known as type-embedding
 type College struct {
 	Location string
 	Fees int
