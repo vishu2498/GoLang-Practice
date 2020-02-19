@@ -56,6 +56,7 @@ func main() {
 	fmt.Println(comp1)
 }
 //If we want to use the struct and its fields in another packages, capitalize every first letter of every field of struct
+//In case if any of the name of field doesn't start with a capital letter, that field can't be used in another packages/files i.e. it will remain unexported
 type Company struct {
 	Name string
 	Location string
