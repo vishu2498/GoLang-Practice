@@ -34,6 +34,7 @@ func main() {
 	go func() {
 		fmt.Println("resumed")
 		runtime.Gosched() //It allows itself and other GoRoutines to run. It doesn't suspend current GoRoutine.
+		//It actually forces the Go runtime scheduler to execute the current GoRoutine in case any other GoRoutine is also operating.
 		//Also, due to this function mentioned here, this anonymous function will run after the execution of next statement mentioned after GoRoutine.
 	}()
 
