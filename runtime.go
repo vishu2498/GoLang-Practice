@@ -4,6 +4,7 @@ package main
 import (
 	"fmt"
 	"runtime"
+	deb "runtime/debug"
 )
 func main() {
 	fmt.Println(runtime.GOROOT()) //shows the current GOROOT defined
@@ -15,7 +16,11 @@ func main() {
 	/*GOMAXPROCS shows the total number of CPUs available to run the program. Value can be set to reduce or increase the CPUs.
 	Negative number will mean nothing.*/
 	fmt.Println(runtime.GOMAXPROCS(4))
-
+	/* SetMaxThreads sets the maximum number of operating system
+	threads that the Go program can use. If it attempts to use more than
+	this many, the program crashes. The initial setting is 10,000 threads.
+	It limits the number of OS threads, not the number of goroutines.*/
+	fmt.Println(deb.SetMaxThreads(10))
 	go func() {
 		fmt.Println("from anonymous")
 		/*Goexit() terminates the goroutine that calls it. No other goroutine is affected.
