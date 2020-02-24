@@ -40,6 +40,9 @@ Multiple GoRoutine threads are deployed on a single OS thread and it is the resp
 This avoids us to deal with low-level thread scheduling and the scheduler does this for us automatically.
 Also, this allows the GoRoutines to be allocated with very small space stack very quickly.*/
 //Go scheduler runs in user space, above the kernel.
+//When a goroutine makes a blocking syscall, the scheduler will detach the thread from the processor and create a new thread to service that processor.
+//Blocking syscalls are made in conditions like I/O operations and file-handling purposes (eg. opening a file).
+//Once the syscall returns, the goroutine is placed back into a local run queue.
 
 //To turn a function into GoRoutine, write 'go' keyword before the function calling.
 //This tells the compiler to run a new thread inside the main() thread.
