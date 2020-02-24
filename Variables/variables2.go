@@ -15,6 +15,11 @@ func main() {
 	var var16 string = strconv.Itoa(var15) //'Itoa' means integer to ASCII
 	fmt.Println(var16)
 
+	var17:="254"
+	var18,_:=strconv.Atoi(var17)//'Atoi' converts the given string to its equivalent representative integer value.
+	//It returns the integer and an error.
+	fmt.Println(var18)
+
 	//In case if it is needed to perform operations on two unequal data-type values, then we have to type cast
 	var var3 uint64 = 14
 	var var4 int = 48
