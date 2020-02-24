@@ -13,6 +13,7 @@ func main() {
 	  The GOMAXPROCS option allows us to tune it down.
 	*/
 	//GOMAXPROCS(1) is used when we want to execute single-threaded application (no parallelism)
+	//Setting GOMAXPROCS() value to more than 1 will enable parallelism.
 	//Setting GOMAXPROCS() to any negative value will have no effect
 
 	fmt.Println("Threads available:",runtime.GOMAXPROCS(3))
