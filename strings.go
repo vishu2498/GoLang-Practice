@@ -15,11 +15,32 @@ func main() {
 	fmt.Println()
 	//Strings are generally immutable. So we can't change the inside values of string by just changing value from byte.
 
+	//Iterating over a string
+	var var15 string
+	var15="vishu"
+	for i:=0; i<len(var15); i++ {
+		fmt.Print(string(var15[i]))
+	}
+	fmt.Println()
+
+	//Reverse-Iterating over a string
+	var var14 string
+	var14="vishu"
+	for i:=len(var14)-1; i>=0; i-- {
+		fmt.Print(string(var14[i]))
+	}
+	fmt.Println()
+
 	//Iterating over the string since the inside representation of a string is byte
+	//By for-range loop
 	var var10 string
 	var10="hello"
 	for key, value := range var10 {
 		fmt.Println(key,value) //will print the the index of each character of string with its ASCII value
+	}
+	fmt.Println()
+	for key, value := range var10 {
+		fmt.Println(key,string(value)) //will print the the index of each character of string with its string character
 	}
 	fmt.Println()
 
