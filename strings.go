@@ -57,4 +57,19 @@ func main() {
 	for var9:='a';var9<'a'+26 ; var9++ {
 		fmt.Print(string(var9))
 	}
+	fmt.Println()
+
+	//Comparing Strings
+	//'strings.Compare()' function is used here.
+	//It returns '0' if strings are equal.
+	//It returns '-1' if 1st string is bigger than 2nd string or both strings are unequal.
+	//It returns '1' if 2nd string is bigger than 1st string.
+	var11:="hello"
+	var12:="vishu"
+	var13:=strings.Compare(var11,var12)
+	if var13==0 {
+		fmt.Println(true)
+	} else {
+		fmt.Println(false)
+	}
 }
