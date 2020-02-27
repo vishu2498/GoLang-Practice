@@ -15,6 +15,14 @@ func main() {
 	fmt.Println()
 	//Strings are generally immutable. So we can't change the inside values of string by just changing value from byte.
 
+	//Iterating over the string since the inside representation of a string is byte
+	var var10 string
+	var10="hello"
+	for key, value := range var10 {
+		fmt.Println(key,value) //will print the the index of each character of string with its ASCII value
+	}
+	fmt.Println()
+
 	//String-Concatenation
 	var2, var3 := "hello", "there"
 	fmt.Println(var2 + var3)
