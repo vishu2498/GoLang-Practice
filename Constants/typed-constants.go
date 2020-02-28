@@ -42,5 +42,15 @@ func main() {
 	fmt.Println(var1+c10)
 	fmt.Println()
 
-
+	//Using pipe-operator
+	//This operator is used to 'OR' constant values by their binary values.
+	//However, the end result will always be converted to the default value (not binary value).
+	const c11 int = 1 //0001
+	const c12 int = 2 //0010
+	const c13 int = c11 | c12 //0001 OR 0010 = 0011
+	fmt.Println(c13)
+	const c14 int = 2 //0010
+	const c15 int = 5 //0101
+	const c16 int = c14 | c15 //0010 OR 0101 = 0111
+	fmt.Println(c16)
 }
