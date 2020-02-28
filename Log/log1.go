@@ -26,3 +26,8 @@ func main()  {
 	//Also, log.Fatalf() and 'log.Fatalln()' can be used.
 }
 
+/*One nice thing about the 'log' package is that loggers are multigoroutine-safe. This
+means that multiple goroutines can call these functions from the same logger value at
+the same time without the writes colliding with each other. The standard logger and
+any customized logger you may create will have this attribute.
+ */
