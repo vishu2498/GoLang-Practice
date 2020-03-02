@@ -1,3 +1,5 @@
+//JSON: JavaScript Object Notation
+
 //Decoding JSON
 package main
 
