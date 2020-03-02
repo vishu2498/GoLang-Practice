@@ -6,6 +6,7 @@ func main() {
 	//Struct is essentially a collection of various types of data in variables
 	//Struct can be declared both at global and local level
 	//Structs are generally the structure of an organized data-type. Variables use them to define their values.
+	//Although structs do not have an “empty” value, struct pointers do, with the empty value being nil.
 	type Student struct {
 		name string
 		class int
