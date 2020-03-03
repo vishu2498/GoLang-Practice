@@ -22,6 +22,10 @@ func main() {
 		},
 	}
 	fmt.Println(stud1)
+	fmt.Printf("%+v",stud1) //'%+v' is used to get the fields of struct with field names too
+	fmt.Println()
+	fmt.Printf("%#v",stud1) //'%#v' performs similar to '%+v' but adds that where the values are arriving from (eg. from a function)
+	fmt.Println()
 
 	//Getting single value from struct
 	fmt.Println(stud1.name)
