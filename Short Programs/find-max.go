@@ -15,6 +15,7 @@ func main() {
 	fmt.Println(math.Max(65,212))
 }
 
+//It will also work for negative values
 func max(values []int) int {
 	max := values[0]
 	for i := 0; i < len(values); i++ { //'i' can be both '0' or '1'
