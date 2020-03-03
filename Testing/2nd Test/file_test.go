@@ -13,6 +13,7 @@ func Test1(t *testing.T) {
 		//this is particularly used when test-case is failed but program should not stop execution.
 		//'Errorf()' is also available.
 	}
+	t.Log("resumed")
 }
 
 func f1() error {
