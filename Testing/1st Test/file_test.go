@@ -29,3 +29,5 @@ func f1() error { //function returning an error
 	var1:=errors.New("this is an error")
 	return var1
 }
+
+//'FailNow()' calls 'Fail()' and 'Fail()' marks the test-case as failed.
