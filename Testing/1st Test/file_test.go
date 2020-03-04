@@ -9,7 +9,7 @@ import (
 )
 
 //Testing function must be an exported function and must start with "Test" keyword.
-//It must not return something.
+//It must not return something. But it can have a receiver (turning test function into a method).
 //It must take one argument of data-type (pointer) '*testing.T' where 'T' is a struct.
 func Test1(t *testing.T) {
 	t.Log("passing the 1st test") //works similar to 'Println()' and records the text in the error log
