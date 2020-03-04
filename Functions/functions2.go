@@ -11,6 +11,8 @@ func main() {
 	f1("hello","there","how","are","you")
 	fmt.Println()
 	f2("here we go:",1,2,3,4,5,6,7,8,9)
+	fmt.Println()
+	fmt.Println(f3(5, 3, 4, 6, 8, 50))
 }
 
 func f1(msgs ...string) { //'...' literal makes any function as variadic function
@@ -22,4 +24,13 @@ func f1(msgs ...string) { //'...' literal makes any function as variadic functio
 //Also, the variadic parameter compulsorily has to be the last parameter in the variadic function.
 func f2(msg string,values ...int) {
 	fmt.Println(msg,values)
+}
+
+//Adding any number of values using variadic function
+func f3(values ...int) int {
+	var sum int
+	for _,value := range values {
+		sum = value + sum
+	}
+	return sum
 }
