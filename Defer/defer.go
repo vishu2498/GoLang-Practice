@@ -19,6 +19,8 @@ func main() {
 	f3()
 	fmt.Println()
 	f4()
+	fmt.Println()
+	fmt.Println(f5())
 }
 
 func f1()  {
@@ -59,3 +61,8 @@ func f4() {
 	var1="there"
 }
 
+//showing that even if 'defer' executes at the end of function, it will execute just before the function returns i.e. before the 'return' keyword
+func f5() string {
+	defer fmt.Println("deferred")
+	return "returned"
+}
