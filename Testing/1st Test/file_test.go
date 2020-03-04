@@ -1,7 +1,7 @@
 //The test-file name must end with '_test.go'.
 //To run the test, use command: "go test -v"
 //"-v" is for verbose output
-package _st_Test
+package main
 
 import (
 	"errors"
