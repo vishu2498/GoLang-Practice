@@ -12,7 +12,7 @@ func main()  {
 	map1:=make(map[string]interface{})
 	map1["name"]="vishu"
 	map1["age"]=21
-	map1["alive"]=true
+	map1["isAlive"]=true
 
 	//Marshal() takes the data of any data-type (since argument type is interface{}) and returns the JSON in the form of slice of bytes.
 	//It also returns an error which needs to be dealt with.
