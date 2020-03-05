@@ -1,3 +1,6 @@
+// +build unit
+//This tag is used to tell GoLang compiler that we are performing unit testing here.
+
 //The test-file name must end with '_test.go'.
 //To run the test, use command: "go test -v"
 //"-v" is for verbose output
