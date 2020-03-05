@@ -11,6 +11,7 @@ import (
 //Testing function must be an exported function and must start with "Test" keyword.
 //It must not return something. But it can have a receiver (turning test function into a method).
 //It must take one argument of data-type (pointer) '*testing.T' where 'T' is a struct.
+//T is a type passed to Test functions to manage test state and support formatted test logs.
 func Test1(t *testing.T) {
 	t.Log("passing the 1st test") //works similar to 'Println()' and records the text in the error log
 	//It will be only displayed when '-v' is used with 'go test' or if the test fails.
