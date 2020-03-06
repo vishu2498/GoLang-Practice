@@ -9,5 +9,8 @@ func main() {
 	ch = nil
 	ch <- "hello"
 	fmt.Printf("%v, %T", ch, ch)
+
+	//Also, closing a nil channel will result in a panic.
+	//The panic will be: "panic: close of nil channel"
 }
 
