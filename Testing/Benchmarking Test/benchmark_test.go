@@ -25,6 +25,7 @@ func BenchmarkTest(b *testing.B) {
 	b.ResetTimer()
 
 	for i:=0; i<10; i++ {
+		//Benchmarking actually tests the performance of the function mentioned inside the loop.
 		fmt.Println(10)
 	}
 }
