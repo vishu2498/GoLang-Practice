@@ -22,6 +22,8 @@ Benchmarking can be used to test different concurrency patterns*/
 func BenchmarkTest(b *testing.B) {
 	//ResetTimer zeroes the elapsed benchmark time and memory allocation counters and deletes user-reported metrics.
 	//It does not affect whether the timer is running.
+	//This method is useful to reset the timer when initialization is required before the code can start executing the loop.
+	//It is used to have the most accurate benchmark times.
 	b.ResetTimer()
 
 	for i:=0; i<10; i++ {
