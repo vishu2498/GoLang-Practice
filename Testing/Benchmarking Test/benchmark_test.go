@@ -1,4 +1,4 @@
-//To perform benchmarking, use command: "go test -v -bench=BenchmarkTest"
+//To perform benchmarking, use command: go test -v -bench="BenchmarkTest"
 //We have to mention the benchmark function name with "-bench" flag in "go test" command.
 
 package main
