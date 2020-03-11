@@ -60,3 +60,6 @@ func merge(chan1, chan2 <-chan int) <-chan int {
 	}()
 	return newchan
 }
+
+//Even if this program works, it is not giving good performance since it takes a lot of CPU to close the channels and report to the boolean variables.
+//So, even if the channels are done sending values to the final channel, the select-case is still receiving '0' and 'false' as output.
