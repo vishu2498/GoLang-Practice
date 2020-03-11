@@ -45,14 +45,14 @@ func merge(chan1, chan2 <-chan int) <-chan int {
 			//Comma-Ok syntax will hold the values from the channel and a boolean value which will tell that the channel is closed or not.
 			case receive, ok := <-chan1:
 				if !ok {
-					chan1done = true //showing channel is not closed
-					continue
+					chan1done = true //showing channel is closed
+					continue //will not execute the operation when the condition is satisfied
 				}
 				newchan <- receive
 			case receive, ok := <-chan2:
 				if !ok {
-					chan2done = true //showing channel is not closed
-					continue
+					chan2done = true //showing channel is closed
+					continue //will not execute the operation when the condition is satisfied
 				}
 				newchan <- receive
 			}
