@@ -37,6 +37,6 @@ func main() {
 
 //The WaitGroup counter can have a negative value in the case that if multiple GoRoutines return 'wg.Done()' more than the number defined in the 'wg.Add()'.
 //In that case, 'wg.Done()' will decrease the counter to negative value and 'wg.Add()' will panic.
-//So, it is best practice to only define 'wg.Add(1)' and immediately use the GoRoutine with 'wg.Done()'.
+//So, it is best practice to only define 'wg.Add(1)' (usually with for-loop) and immediately use the GoRoutine with 'wg.Done()'.
 
 //'wg.Done()' can be written with 'defer' keyword too at the start of the GoRoutine.
