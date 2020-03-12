@@ -40,3 +40,4 @@ func main() {
 //So, it is best practice to only define 'wg.Add(1)' (usually with for-loop) and immediately use the GoRoutine with 'wg.Done()'.
 
 //'wg.Done()' can be written with 'defer' keyword too at the start of the GoRoutine.
+//If a function is made as GoRoutine and returning something, then 'wg.Done()' must be used before 'return' keyword.
