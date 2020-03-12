@@ -15,14 +15,13 @@ func fileread() error {
 		return err
 	}
 
-	defer file.Close() //will close the at the end of this function
+	defer file.Close() //will close the file at the end of this function
 
 	contents, err := ioutil.ReadFile("file.txt")
 	if err!=nil {
 		return err
 	}
 	fmt.Println(string(contents)) //conversion to string is necessary
-
 
 	return nil
 }
