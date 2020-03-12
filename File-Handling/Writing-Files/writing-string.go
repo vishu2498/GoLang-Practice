@@ -25,8 +25,8 @@ func main() {
 	slice1:=[]byte{53,68,24}
 	content1,err:=file1.Write(slice1) //It writes contents to the file in the form of slice of bytes and returns the number of bytes written.
 	if err!=nil {
-		log.Fatal("couldn't write to file")
 		file1.Close()
+		log.Fatal("couldn't write to file")
 		return
 	}
 	fmt.Println(content1) //shows the length of the contents written to file
@@ -44,8 +44,8 @@ func main() {
 
 	content2,err:=file2.WriteString("message from vishu") //It is similar to 'Write()' but directly takes string as argument instead of slice of bytes.
 	if err!=nil {
-		fmt.Println("couldn't write to file")
 		file2.Close()
+		fmt.Println("couldn't write to file")
 		return
 	}
 	fmt.Println(content2) //length of contents written in the file
