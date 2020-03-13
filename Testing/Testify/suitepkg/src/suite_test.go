@@ -1,4 +1,4 @@
-package suitepkg_test
+package suitepkg1_test
 
 import (
 	"github.com/stretchr/testify/suite"
