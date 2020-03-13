@@ -1,4 +1,4 @@
-package src_test
+package suitepkg_test
 
 import (
 	"github.com/stretchr/testify/suite"
@@ -28,4 +28,25 @@ func (s *StackSuite) TestNotEmpty()  {
 	stack:=suitepkg.NewStack()
 	stack.Bury("green")
 	s.False(stack.IsEmpty()) //using 's.False()' to pass the test
+}
+
+func (s *StackSuite) TestEmptySizeZero(t *testing.T) { //used (t *testing.T) just for using 't.Fatal()'
+	stack:=suitepkg.NewStack()
+	value:=s.NotZero(stack.Size()) //checking if the returned values is not zero
+	if value==false {
+		t.Fatal("value is not zero")
+	}
+}
+
+func (s *StackSuite) TestSizeThree() {
+	stack:=suitepkg.NewStack()
+	s.Equal(3,stack.Size())
+}
+
+func (s *StackSuite) TestBurySize() {
+	stack:=suitepkg.NewStack()
+	stack.Bury("green")
+	stack.Bury("yellow")
+	stack.Bury("violet")
+	s.Equal(3,stack.Size())
 }
