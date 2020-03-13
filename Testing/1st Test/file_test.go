@@ -4,6 +4,8 @@
 //The test-file name must end with '_test.go'.
 //To run the test, use command: "go test -v"
 //"-v" is for verbose output
+
+//If we have multiple tests in one test file and we want to execute only a certain test function, use command: "go test -run TestFunction"
 package main
 
 import (
