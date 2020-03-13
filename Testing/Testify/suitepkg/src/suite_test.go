@@ -20,18 +20,18 @@ func TestStackSuite(t *testing.T) {
 
 //From here on, we can write our test-cases.
 func (s *StackSuite) TestEmpty() {
-	stack:=suitepkg.NewStack()
+	stack:= suitepkg.NewStack()
 	s.True(stack.IsEmpty())
 }
 
 func (s *StackSuite) TestNotEmpty()  {
-	stack:=suitepkg.NewStack()
+	stack:= suitepkg.NewStack()
 	stack.Bury("green")
 	s.False(stack.IsEmpty()) //using 's.False()' to pass the test
 }
 
 func (s *StackSuite) TestEmptySizeZero(t *testing.T) { //used (t *testing.T) just for using 't.Fatal()'
-	stack:=suitepkg.NewStack()
+	stack:= suitepkg.NewStack()
 	value:=s.NotZero(stack.Size()) //checking if the returned values is not zero
 	if value==false {
 		t.Fatal("value is not zero")
@@ -39,12 +39,12 @@ func (s *StackSuite) TestEmptySizeZero(t *testing.T) { //used (t *testing.T) jus
 }
 
 func (s *StackSuite) TestSizeThree() {
-	stack:=suitepkg.NewStack()
+	stack:= suitepkg.NewStack()
 	s.Equal(3,stack.Size())
 }
 
 func (s *StackSuite) TestBurySize() {
-	stack:=suitepkg.NewStack()
+	stack:= suitepkg.NewStack()
 	stack.Bury("green")
 	stack.Bury("yellow")
 	stack.Bury("violet")
