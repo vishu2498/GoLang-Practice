@@ -1,4 +1,4 @@
-package suitepkg
+package suitepkg1
 
 type Stack struct {
 	isEmpty bool
@@ -10,12 +10,11 @@ func (stack *Stack) IsEmpty() bool {
 }
 
 func (stack *Stack) Bury(item string) {
-	stack.isEmpty=false
 	stack.size++
 }
 
 func (stack *Stack) Size() int {
-	return 3
+	return stack.size
 }
 func NewStack() *Stack {
 	return &Stack{true,3}
