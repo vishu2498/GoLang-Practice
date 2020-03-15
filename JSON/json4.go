@@ -17,6 +17,7 @@ func main() {
 
 //Decoding the JSON using 'json.NewDecoder()' & 'Decode()' functions.
 //It will return the same output as JSON Unmarshalling (JSON as map).
+//This also doesn't require a struct to be available (pre-required) for decoding JSON.
 func result(str string) (interface{},error) {
 	var result interface{} //this interface will hold the final result
 	decodeIntoObj:=json.NewDecoder(strings.NewReader(str)) //variable will hold the '*Decoder' object after decoding from the string
