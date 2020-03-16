@@ -4,6 +4,8 @@
 //The test-file name must end with '_test.go'.
 //To run the test, use command: "go test -v"
 //"-v" is for verbose output
+//Test Code is compiled ONLY at test time.
+//Any test-file with name ending with '_test.go' will not seen by 'go build', 'go run' and 'go install'.
 
 //If we have multiple tests in one test file and we want to execute only a certain test function, use command: "go test -run TestFunction"
 package main
