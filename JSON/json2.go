@@ -45,4 +45,23 @@ func main()  {
 		log.Println("Error is: ",err2)
 	}
 	fmt.Println(string(output2))
+
+	//Marshalling Struct data into JSON
+	Emp1:=Emp{
+		Name:     "vishu",
+		Age:      21,
+		Employed: true,
+	}
+
+	output3,err3:=json.Marshal(Emp1)
+	if err3!=nil {
+		log.Println("Error is: ",err3)
+	}
+	fmt.Println(string(output3))
+}
+
+type Emp struct {
+	Name     string
+	Age      int
+	Employed bool
 }
