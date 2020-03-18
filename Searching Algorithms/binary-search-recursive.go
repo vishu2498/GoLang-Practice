@@ -1,4 +1,4 @@
-//Binary Search
+//Binary Search (Recursive-Manner)
 //It compulsory for the list to be sorted to implement binary search.
 package main
 
@@ -7,27 +7,25 @@ import "fmt"
 func main() {
 	arr := []int{1, 3, 4, 6, 8, 11, 13, 27, 54}
 	digit := 11
-	if BinarySearch(arr, digit) == true {
+	low := 0
+	high := len(arr) - 1
+	if BinarySearch(arr, low, high, digit) == true {
 		fmt.Println("value found")
 	} else {
 		fmt.Println("value not found")
 	}
 }
 
-func BinarySearch(arr []int, digit int) bool {
-	var low int
+func BinarySearch(arr []int, low, high, digit int) bool {
 	var mid int
-	var high int
-	low = 0
-	high = len(arr) - 1
-	for low <= high {
+	if low <= high {
 		mid = (low + high) / 2
 		if digit == arr[mid] {
 			return true
 		} else if digit < arr[mid] {
-			high = mid - 1
+			return BinarySearch(arr, low, mid-1, digit)
 		} else {
-			low = mid + 1
+			return BinarySearch(arr, mid+1, high, digit)
 		}
 	}
 	return false
