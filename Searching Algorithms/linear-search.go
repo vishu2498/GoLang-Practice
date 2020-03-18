@@ -1,3 +1,5 @@
+//Linear Search
+//There is no need of the list to be sorted to implement linear search.
 package main
 
 import "fmt"
