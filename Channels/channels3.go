@@ -20,5 +20,6 @@ func main() {
 			ch<-42
 			wg.Done()
 		}()
+		wg.Wait()
 	}
 }
