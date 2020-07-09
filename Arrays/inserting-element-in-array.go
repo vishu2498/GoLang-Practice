@@ -17,6 +17,7 @@ func main() {
 	}
 	arr[index]=valueToInsert //inserting the element at the freed-up index
 	lengthOfArray++
+	//we can instead not use and increment 'lengthOfArray' variable and just use 'len(arr)' with 'len(arr)-1' in for loop 
 
 	//Final Array
 	for key,value:=range arr {
