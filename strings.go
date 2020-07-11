@@ -94,6 +94,11 @@ func main() {
 	} else {
 		fmt.Println(false)
 	}
+	
+	//Checking if a string contains some string
+	//It will print boolean value
+	string1:="hello there"
+	fmt.Println(strings.Contains(string1,"there"))
 
 	//Checking if the given string is actually a number
 	//'strconv.Atoi()' converts ASCII values of the argument to integer and returns the integer.
