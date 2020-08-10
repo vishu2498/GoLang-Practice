@@ -54,12 +54,17 @@ func main() {
 	var5 := []byte(var4)
 	fmt.Println(var5) //This will show the ASCII (UTF-8) values of all the characters of the string
 
-	//'string.Trim()' from 'strings' package cuts the string given in the 2nd argument from the 1st argument
+	//'strings.Trim()' from 'strings' package cuts the string given in the 2nd argument from the 1st argument
 	//And returns the remaining slice of string
 	var6 := "egstring"
 	fmt.Println(strings.Trim(var6, "eg"))
 	fmt.Println(var6) //showing that 'strings.Trim()' works on copy of data passed into arguments and not on original data
 	fmt.Println()
+	
+	//'strings.TrimSuffix()' from 'strings' package is mainly used for ending of string & removes the string given in the 2nd argument from the 1st argument
+	//And returns remaining string
+	var17 := "google.com"
+	fmt.Println(strings.TrimSuffix(var17,".com")) //will cut ".com" from "google.com" and print "google"
 
 	//Characters defined explicitly are actually of 'int32' data-type.
 	var7 := 'v'
