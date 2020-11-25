@@ -115,4 +115,7 @@ func main() {
 	delete(map10,"1st")
 	fmt.Println(map9) //deleting value from map10 also deleted value from map9 since both are pointing to the same map
 	fmt.Println(map10)
+	
+	//A nil map is one that has never been initialized, and can't be assigned to (this would terminate the program with a panic: assignment to entry in nil map). However, you can check if a map is nil by comparing it like: "map == nil"
+	//An empty map is a map that contains zero keys
 }
