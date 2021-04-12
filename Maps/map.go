@@ -116,6 +116,20 @@ func main() {
 	fmt.Println(map9) //deleting value from map10 also deleted value from map9 since both are pointing to the same map
 	fmt.Println(map10)
 	
+	//Nested Maps
+	map11 := map[string]string{
+		"hello" : "vishu",
+	}
+	map12 := map[string]map[string]string{
+		"sample" : map11,
+	}
+	map13:=map[string]map[string]map[string]string {
+		"value":map12,
+	}
+	fmt.Println(map13["value"])
+	fmt.Println(map13["value"]["sample"])
+	fmt.Println(map13["value"]["sample"]["hello"])
+	
 	//A nil map is one that has never been initialized, and can't be assigned to (this would terminate the program with a panic: assignment to entry in nil map). However, you can check if a map is nil by comparing it like: "map == nil"
 	//An empty map is a map that contains zero keys
 }
